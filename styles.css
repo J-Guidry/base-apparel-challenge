@@ -32,9 +32,8 @@ body {
     padding: 10px;
 }
 
-.email button {
+.submitButton {
     text-decoration: none;
-    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: none;
     padding: 9px;
     padding-left: 25px;
@@ -48,24 +47,68 @@ body {
     box-shadow: 7px 15px 40px -2px rgba(238,140,140,0.76);
 }
 
-.email input {
+.submit-color {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.emailInput {
     border-radius: 25px;
     border: 1px solid hsl(0, 36%, 80%);
     padding: 10px;
     display:inline-block;
 }
 
-input[placeholder] {
+.emailInput[placeholder] {
     text-align:left;
     padding-left: 20px;
 }
 
-input::placeholder{
+.emailInput::placeholder{
     color: hsl(0, 36%, 80%);
 }
 
-input::-ms-input-placeholder {
-    color: 	#ee8c8c;
+.emailInput::-ms-input-placeholder {
+    color: hsl(0, 36%, 80%);
+}
+
+.active-border {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.active-button {
+    background-color: hsl(350, 60%, 88%);
+}
+
+.error {
+    transform:translateX(-135px);
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+.error-active {
+    visibility: visible;
+}
+
+.error-message {
+    color: hsl(0, 93%, 68%);
+    font-size: 0.8em;
+    text-align: left;
+    margin-left: 25px;
+    visibility: hidden;
+}
+
+.error-message-visible {
+    visibility: visible;
+}
+
+@media screen and (min-width: 850px) and (max-width: 973px) {
+    .email {
+        position: relative;
+    }
+    .error {
+        position:absolute;
+        top: 18px;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -89,8 +132,8 @@ input::-ms-input-placeholder {
         padding: 10px;
     }
     
-    input {
-        width: 80%;
+    .emailInput {
+        width: 70%;
         display:inline-block;
     }
 }
@@ -101,10 +144,11 @@ input::-ms-input-placeholder {
     }
     .email {
         margin-bottom: 20px;
+        padding: 5px;
     }
 
-    input {
-        width: 70%;
+    .emailInput {
+        width: 65%;
         display:inline-block;
     }
 }
@@ -145,7 +189,7 @@ input::-ms-input-placeholder {
         margin-right: 55vw;
     }
 
-    .email input{
+    .emailInput{
         margin: 0;
         width: 60%;
     }
