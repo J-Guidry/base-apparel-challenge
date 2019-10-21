@@ -37,8 +37,8 @@ body {
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: none;
     padding: 9px;
-    padding-left: 19px;
-    padding-right: 19px;
+    padding-left: 25px;
+    padding-right: 25px;
     border-radius: 20px;
     transform: translateX(-35px);
     cursor: pointer;
@@ -48,7 +48,7 @@ body {
     box-shadow: 7px 15px 40px -2px rgba(238,140,140,0.76);
 }
 
-input {
+.email input {
     border-radius: 25px;
     border: 1px solid hsl(0, 36%, 80%);
     padding: 10px;
@@ -57,6 +57,7 @@ input {
 
 input[placeholder] {
     text-align:left;
+    padding-left: 20px;
 }
 
 input::placeholder{
@@ -115,10 +116,11 @@ input::-ms-input-placeholder {
 
     .logo {
         display: inline-block;
+        margin-left: 10%;
     }
     .banner-image {
         background-image: url("images/hero-desktop.jpg");
-        height: 800px;
+        height: 100vh;
         width: 50vw;
         background-repeat: no-repeat; 
         background-origin: content-box;
@@ -128,5 +130,23 @@ input::-ms-input-placeholder {
 
     .banner-headline {
         font-size: 40px;
+        margin-left: 10%;
+        margin-right: 55vw;
+        margin-top: 150px;
+    }
+
+    .banner-paragraph {
+        margin-left:10%;
+        margin-right: 55vw;
+    }
+
+    .email {
+        margin-left: 10%;
+        margin-right: 55vw;
+    }
+
+    .email input{
+        margin: 0;
+        width: 60%;
     }
 }
